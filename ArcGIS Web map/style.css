@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #f6f6f6;
+  /* background: #cbd5e1; */
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template-rows: 70px 1fr;
+}
+
+/* App header */
+header {
+  background: #473493;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Main page container */
+.content {
+  display: grid;
+  grid-template-columns: 3% 20% 77%;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* Navigation bar */
+.app_nav {
+  width: 100%;
+  background-color: #9381dc;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: center;
+}
+
+.nav_btn {
+  width: 80%;
+  color: white;
+  cursor: pointer;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  height: 100px;
+  text-orientation: mixed;
+  background-color: #9381dc;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+}
+
+.nav_btn:hover {
+  background-color: #5a47a59b;
+  transition: all 0.5s ease;
+}
+
+.active {
+  background-color: #473493;
+}
+
+.zoomLyBtn,
+.zoomRecBtn,
+.highlightRecBtn {
+  background-color: #9381dc00;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* selected page */
+.layer_page {
+  width: 100%;
+  height: 100%;
+}
+
+.query_page {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.layer_page,
+.query_page {
+  background-color: #bac0e500;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.app_sidebar {
+  padding: 10px;
+  height: 100%;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Map container */
+.main {
+  margin: 10px 10px 10px 0px;
+  border-radius: 25px;
+}
+
+#viewDiv {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+/* Layers Container */
+.layers-container {
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #ffffff00;
+}
+
+.layer-item,
+.recordCard {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  background-color: #ffffff00;
+  border: 0.6px solid #676767;
+  border-radius: 5px;
+}
+
+/* form element */
+
+#layerSelect {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 8px 12px;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0px #0000004f;
+
+  margin-bottom: 10px;
+}
+
+.formSty {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 8px 12px;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  /* box-shadow: 0 1px 3px 0px #0000007a; */
+
+  margin-bottom: 10px;
+}
+
+.formBtnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.fmBtn {
+  width: 50%;
+  margin-top: 10px;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.submit {
+  background-color: #473493;
+  color: white;
+  border: none;
+}
+
+.clear {
+  background-color: #9381dc;
+  color: black;
+  border: none;
+}
+
+.zoomAll {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.submit,
+.zoomAll {
+  background-color: #473493;
+  color: white;
+  border: none;
+}
+
+/* basemap gallery */
+arcgis-basemap-gallery {
+  width: 320px;
+  max-height: 500px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+arcgis-expand arcgis-basemap-gallery {
+  width: 320px;
+}
+
+/* identify tool */
+
+#identifyBtn {
+  background-color: #2a2a2a;
+  text-align: center;
+  padding: 8px 12px;
+  color: #e5e5e5;
+  cursor: pointer;
+  border: none;
+}
+
+#identifyBtn.activeID {
+  background-color: #15bb0f;
+}
+
+#viewDiv.identify-active {
+  cursor: crosshair !important;
+}
