@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>ArcGIS App</title>
+  <!-- Load main stylesheet of the app -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+  <!-- Load the ArcGIS Maps SDK for Style -->
+  <link rel="stylesheet" href="https://js.arcgis.com/4.30/esri/themes/dark/main.css">
+
+  <!-- Load the ArcGIS Maps SDK for JavaScript -->
+  <script type="module" src="https://js.arcgis.com/5.0/"></script>
+
+
+</head>
+
+<body class="calcite-mode-dark">
+  <div class="page">
+
+    <header id="app_header">
+      <h3>ArcGIS Webapp</h3>
+    </header>
+
+    <div class="content">
+      <nav class="app_nav">
+        <button class="nav_btn active">Layers</button>
+        <button class="nav_btn ">Query</button>
+      </nav>
+
+      <aside class="app_sidebar">
+        <aside class="layer_page">
+          <h2>Features layer</h2>
+          <div class="layers-container">
+            <div class="layer-item">
+              <div>
+                <input type="checkbox" class="checkLy" name="Cities">
+                <label>Cities</label>
+              </div>
+              <div class="layer-buttons">
+                <button title="Zoom to layer" class="zoomLyBtn" name="Cities"><i
+                    class="fa-solid fa-magnifying-glass-plus"></i></button>
+              </div>
+            </div>
+            <div class="layer-item">
+              <div>
+                <input type="checkbox" class="checkLy" name="States">
+                <label>States</label>
+              </div>
+              <div class="layer-buttons">
+                <button title="Zoom to layer" class="zoomLyBtn" name="States"><i
+                    class="fa-solid fa-magnifying-glass-plus"></i></button>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <aside class="query_page">Query
+
+          <div id="actionBtns">
+            <form action="" id="layerForm">
+              <select id="layerSelect" class="formSty" name="layerSelect" required>
+                <option value="" disabled selected>Select a layer</option>
+                <option value="Cities">Cities</option>
+                <option value="States">States</option>
+              </select>
+
+              <br>
+
+              <!-- <label for="attributeSelect">Select an attribute:</label> -->
+              <!-- <select id="attributeSelect" class="formSty" name="attributeSelect">
+              </select>
+
+              <input class="formSty" type="text" id="fromDate" placeholder="📆From">
+              <input class="formSty" type="text" id="toDate" placeholder="📆To"> -->
+
+            </form>
+            <div class="formBtnContainer">
+              <button class="submit fmBtn">Run
+                Query</button>
+              <button class="clear fmBtn">
+                Clear</button>
+            </div>
+            <button class="zoomAll fmBtn">
+              Zoom To Reuslt Extent</button>
+          </div>
+        </aside>
+      </aside>
+
+
+      <main class="main">
+        <div id="viewDiv">
+        </div>
+      </main>
+
+    </div>
+
+  </div>
+
+  <script src="./main.js" type="module">
+
+  </script>
+</body>
+
+</html>
